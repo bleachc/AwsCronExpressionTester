@@ -1,38 +1,73 @@
-.App {
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input {
+  width: 350px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.slider:hover {
+  opacity: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: green; 
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: green;
+  cursor: pointer;
+}
+
+.result-card {
+    border: solid black 1px;
+    border-radius: 5px;
+    background: gray;
+    padding: 15px 30px;
+}
+
+.result-card > p {
+    margin: 15px 0 15px;
+}
+
+a {
+    color: green;
+}
+
+th {
+    text-align: left;
+}
+
+td, th {
+    padding: 5px 30px;
 }
